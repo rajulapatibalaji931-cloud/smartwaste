@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap');
 
 :root {
-  /* Pale Clean Mint Green Palette */
   --bg-main: #f4f8f5;
   --bg-surface: #ffffff;
   --bg-subtle: #edf5f0;
   --bg-accent: #e2f0e7;
 
-  /* Forest Green Branding */
   --primary: #1e7044;
   --primary-hover: #165633;
   --primary-light: #d6ede0;
@@ -16,19 +14,16 @@
   --text-secondary: #586e62;
   --text-muted: #748a7e;
 
-  /* Classical Corner Borders & Frames */
   --border: #cadcd0;
   --border-subtle: #dbe7df;
   --border-focus: #4aa874;
   --border-dark: #1e3a2b;
 
-  /* Architectural Sharp/Slight Corner Radii */
   --radius-xs: 4px;
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
 
-  /* Sophisticated Soft Layer Shadows */
   --shadow-sm: 0 2px 6px rgba(20, 50, 32, 0.04);
   --shadow-md: 0 8px 24px rgba(20, 50, 32, 0.06);
   --shadow-lg: 0 16px 36px rgba(20, 50, 32, 0.1);
@@ -56,7 +51,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   color: var(--dark);
 }
 
-/* --- Classical Navbar with Structural Lower Border --- */
 .navbar {
   background-color: #0d1a13 !important;
   border-bottom: 2px solid #1e3a2b;
@@ -96,7 +90,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* --- Hero Showcase Sections --- */
 .hero-section {
   background: linear-gradient(135deg, #0e2418 0%, #163e2a 50%, #1c5237 100%);
   color: #ffffff;
@@ -157,7 +150,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   font-weight: 800;
 }
 
-/* --- Headings & Typography Labels --- */
 .section-heading span,
 .eyebrow {
   font-size: 0.8rem;
@@ -174,7 +166,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   font-size: 2.1rem;
 }
 
-/* --- Classical Framed Cards with Corner Borders --- */
 .feature-card,
 .content-card,
 .auth-card,
@@ -207,7 +198,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   margin-bottom: 18px;
 }
 
-/* Inner Corner Inset Accents on Structural Cards */
 .auth-card,
 .content-card,
 .bin-card {
@@ -227,7 +217,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   pointer-events: none;
 }
 
-/* --- Interactive Dashboard Indicators --- */
 .dashboard-stat {
   background: var(--bg-surface);
   border: 1.5px solid var(--border);
@@ -280,7 +269,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   margin: 0;
 }
 
-/* --- Smart Waste Bin Specific Cards --- */
 .bin-id {
   font-family: 'Space Grotesk', monospace;
   font-weight: 700;
@@ -319,7 +307,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   background: #c52938;
 }
 
-/* --- Classical Badges with Solid Outlines --- */
 .status-badge {
   padding: 4px 10px;
   border-radius: var(--radius-xs);
@@ -358,7 +345,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   border-color: #f1b3b8;
 }
 
-/* --- Form Controls & Classic Inputs --- */
 .form-control,
 .form-select {
   border-radius: var(--radius-xs);
@@ -399,7 +385,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   border-color: var(--primary-hover);
 }
 
-/* --- Stats & Mini-Feature Sections --- */
 .stats-section {
   background: var(--bg-subtle);
   border-top: 1.5px solid var(--border);
@@ -457,7 +442,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   color: var(--text-primary);
 }
 
-/* --- Authentication Pages --- */
 .auth-page {
   min-height: 80vh;
   display: flex;
@@ -484,7 +468,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   color: var(--dark);
 }
 
-/* --- Data Tables --- */
 .table {
   color: var(--text-primary);
   border-color: var(--border-subtle);
@@ -509,7 +492,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   border-bottom: 1px solid var(--border-subtle);
 }
 
-/* --- Map & Auxiliary Visuals --- */
 #map {
   height: 380px;
   border-radius: var(--radius-md);
@@ -550,7 +532,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   overflow-x: auto;
 }
 
-/* --- Architectural Structured Footer --- */
 .site-footer {
   background: #0d1a13;
   color: #c1d5cb;
@@ -573,7 +554,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   color: #4cd68a;
 }
 
-/* --- Responsive Adjustments --- */
 @media (max-width: 767px) {
   .hero-section h1 {
     font-size: 2.2rem;
