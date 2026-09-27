@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{document.getElementById("contactForm").addEventListener("submit",e=>{e.preventDefault();if(!e.target.checkValidity()){e.target.reportValidity();return}alertBox("contactAlert","Thank you! Your message has been recorded for this frontend demo.");e.target.reset()})});

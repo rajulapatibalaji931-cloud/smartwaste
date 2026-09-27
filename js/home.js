@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const c=getComplaints();document.getElementById("statResolved").textContent=c.filter(x=>x.status==="Resolved").length;document.getElementById("statUsers").textContent=Math.max(1,getUsers().length);document.getElementById("statBins").textContent=getBins().length;});
