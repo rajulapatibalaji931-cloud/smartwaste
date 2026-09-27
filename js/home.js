@@ -1,1 +1,10 @@
-document.addEventListener("DOMContentLoaded",()=>{const c=getComplaints();document.getElementById("statResolved").textContent=c.filter(x=>x.status==="Resolved").length;document.getElementById("statUsers").textContent=Math.max(1,getUsers().length);document.getElementById("statBins").textContent=getBins().length;});
+document.addEventListener("DOMContentLoaded", () => {
+  const c = getComplaints();
+  const resEl = document.getElementById("statResolved");
+  const userEl = document.getElementById("statUsers");
+  const binEl = document.getElementById("statBins");
+
+  if (resEl) resEl.textContent = c.filter(x => x.status === "Resolved").length;
+  if (userEl) userEl.textContent = Math.max(1, getUsers().length);
+  if (binEl) binEl.textContent = getBins().length;
+});
