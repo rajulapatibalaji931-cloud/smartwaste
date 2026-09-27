@@ -1,4 +1,62 @@
-document.addEventListener("DOMContentLoaded",()=>{
-const lf=document.getElementById("loginForm");if(lf)lf.addEventListener("submit",e=>{e.preventDefault();const email=document.getElementById("email").value.trim().toLowerCase(),password=document.getElementById("password").value;const u=getUsers().find(x=>x.email.toLowerCase()===email&&x.password===password);if(!u)return alertBox("loginAlert","Invalid email or password.","danger");localStorage.setItem("smartwaste_session",JSON.stringify(u));location.href="dashboard.html";});
-const rf=document.getElementById("registerForm");if(rf)rf.addEventListener("submit",e=>{e.preventDefault();if(!rf.checkValidity()){rf.reportValidity();return}const p=document.getElementById("password").value,c=document.getElementById("confirm").value;if(p!==c)return alertBox("registerAlert","Passwords do not match.","danger");let users=getUsers();const email=document.getElementById("email").value.trim().toLowerCase();if(users.some(x=>x.email===email))return alertBox("registerAlert","An account with this email already exists.","danger");const u={name:document.getElementById("name").value.trim(),email,phone:document.getElementById("phone").value.trim(),address:document.getElementById("address").value.trim(),password:p};users.push(u);localStorage.setItem("smartwaste_users",JSON.stringify(users));localStorage.setItem("smartwaste_session",JSON.stringify(u));alertBox("registerAlert","Registration successful. Redirecting...");setTimeout(()=>location.href="dashboard.html",700);});
+document.addEventListener("DOMContentLoaded", () => {
+  const lf = document.getElementById("loginForm");
+  if (lf) {
+    lf.addEventListener("submit", e => {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim().toLowerCase();
+      const password = document.getElementById("password").value;
+      const u = getUsers().find(x => x.email.toLowerCase() === email && x.password === password);
+
+      if (!u) {
+        return alertBox("loginAlert", "Invalid email or password.", "danger");
+      }
+
+      localStorage.setItem("smartwaste_session", JSON.stringify(u));
+      alertBox("loginAlert", "Login successfully! Redirecting...");
+      setTimeout(() => {
+        location.href = "dashboard.html";
+      }, 700);
+    });
+  }
+
+  const rf = document.getElementById("registerForm");
+  if (rf) {
+    rf.addEventListener("submit", e => {
+      e.preventDefault();
+      if (!rf.checkValidity()) {
+        rf.reportValidity();
+        return;
+      }
+
+      const p = document.getElementById("password").value;
+      const c = document.getElementById("confirm").value;
+
+      if (p !== c) {
+        return alertBox("registerAlert", "Passwords do not match.", "danger");
+      }
+
+      let users = getUsers();
+      const email = document.getElementById("email").value.trim().toLowerCase();
+      if (users.some(x => x.email === email)) {
+        return alertBox("registerAlert", "An account with this email already exists.", "danger");
+      }
+
+      const u = {
+        name: document.getElementById("name").value.trim(),
+        email,
+        phone: document.getElementById("phone").value.trim(),
+        address: document.getElementById("address").value.trim() || "Mylavaram, NTR District",
+        password: p
+      };
+
+      users.push(u);
+      localStorage.setItem("smartwaste_users", JSON.stringify(users));
+      localStorage.setItem("smartwaste_session", JSON.stringify(u));
+
+      alertBox("registerAlert", "Registered successfully! Redirecting...");
+      setTimeout(() => {
+        location.href = "dashboard.html";
+      }, 700);
+    });
+  }
 });
